@@ -1,10 +1,11 @@
-from outline_vpn.outline_vpn import OutlineVPN
+from outline_vpn.outline_vpn import OutlineVPN as OutlineVPN
+
 
 class debug:
     def info(message) -> None:
         if debug_keys == True:
             print(f"[Outline Key Manager] [INFO] {message}")
-    
+        
 
     def error(message) -> None:
         print(f"[Outline Key Manager] [ERROR] {message}")

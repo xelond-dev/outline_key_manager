@@ -1,0 +1,18 @@
+[project]
+name = "outline_key_manager_xelond"
+version = "1.0.3"
+authors = [
+  { name="xelond-dev" },
+]
+description = "A simple key management manager for Outline VPN."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/xelond-dev/outline_key_manager"
+Issues = "https://github.com/xelond-dev/outline_key_manager/issues"
