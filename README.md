@@ -22,17 +22,6 @@ okm.init("https://x.x.x.x:xxxxx/xxxxxxxxxxxxxxxxxxxxx", debug=True) # -> str
 
 ---
 
-If you want, you can use Config_Reader for this:
-```python
-okm.init(config.outline_api.get_secret_value(), debug=True) # -> str
-```
-Your .env file:
-```env
-OUTLINE_API=https://x.x.x.x:xxxxx/xxxxxxxxxxxxxxxxxxxxx
-```
-
----
-
 Get all your keys:
 ```python
 okm.get_all_keys() # -> str
