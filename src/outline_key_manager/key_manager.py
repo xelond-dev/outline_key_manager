@@ -43,7 +43,7 @@ def get_key(key_to_find) -> str | int:
 
 def new_key(name = None, renew = False) -> int:
     init_check()
-    if get_key(name) == 44 or renew == True:
+    if get_key(name) == 404 or renew == True:
         debug.info(client.create_key(name))
         return 201
     return 400
@@ -52,7 +52,7 @@ def new_key(name = None, renew = False) -> int:
 def rename_key(old_name, new_name) -> int:
     init_check()
     key_to_rename = get_key(old_name)
-    if key_to_rename != 44:
+    if key_to_rename != 404:
         if client.rename_key(get_key(old_name).key_id, new_name):
             debug.info(f"Key `{old_name}` successfully renamed to `{new_name}`")
             return 203
@@ -66,7 +66,7 @@ def rename_key(old_name, new_name) -> int:
 
 def set_limit(name, limit_MB) -> int:
     init_check()
-    if name != 44:
+    if name != 404:
         if client.add_data_limit(get_key(name).key_id, 1000 * 1000 * limit_MB):
             debug.info(f"Limit {limit_MB}MB is set for `{name}` key.")
             return 203
@@ -80,7 +80,7 @@ def set_limit(name, limit_MB) -> int:
 
 def remove_limit(name) -> int:
     init_check()
-    if name != 44:
+    if name != 404:
         if client.delete_data_limit(get_key(name).key_id):
             debug.info(f"Limit is unset for `{name}` key.")
             return 204
@@ -94,7 +94,7 @@ def remove_limit(name) -> int:
 
 def remove_key(name) -> int:
     init_check()
-    if name != 44:
+    if name != 404:
         if client.delete_key(get_key(name).key_id):
             debug.info(f"Key `{name}` deleted.")
             return 204
